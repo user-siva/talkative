@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
+:root {
+    --shaddow:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06);
+}
+
+body {
+    background-color: #1A1A1D;
+    font-family: 'Dongle', sans-serif;
+}
+
+/* --------------- LOBBY Stylings -------------*/
+
+
+#chat-icon {
+    display: block;
+    width: 150px;
+    margin:0 auto;
+}
+
+#form-container {
+    width: 600px;
+    box-shadow: #950740 0px 5px 15px;
+    padding: 30px;
+    position: fixed;
+    border-radius: 5px;
+    background-color: #950740;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+#welcome-message{
+    text-align: center;
+    margin: 10px;
+}
+
+#welcome-message h1{
+    font-size: 36px;
+    margin: 1px;
+    color: #f1a90c;
+}
+
+#welcome-message p{
+    font-size: 16px;
+    margin: 1px;
+}
+
+.form-field{
+    margin: 20px;
+}
+
+.form-field label{
+    font-size: 16px;
+    line-height: 1.7em;
+}
+
+.form-field input {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.form-field input[type='submit'] {
+    background-color: rgba(75,95,172,1);
+    color: #fff;
+    border: none;
+}
+
+@media screen and (max-width:450px) {
+    #form-container{
+        width: 95%;
+    }
+    #welcome-message h1 {
+        font-size: 26px;
+    }
+}
+
+/* Room Stylings */
+
+#room-name-wrapper{
+    text-align: center;
+    font-size: 18px;
+    color: #f1a90c;
+    font-family: 'Mochiy Pop P One', sans-serif;
+
+}
+
+#video-streams {
+    display: flex;
+    height: 85vh;
+    width: 75%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+}
+
+.video-container {
+    flex-basis: 500px;
+    flex-grow: 1;
+    max-height: 100%;
+    min-height: 350px;
+    border: 1px solid rgba(75,95,172,1);
+    border-radius: 5px;
+    margin: 2px;
+    background-color: rgba(198, 202, 219, 1);
+    position: relative;
+}
+
+.video-player {
+    height: 100%;
+    width: 100%;
+}
+
+.video-player > *{
+    border-radius: 5px;
+}
+
+.user-name-wrapper {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
+    background-color: rgba(0,0,0,0.3);
+    padding: 7px;
+    border-radius: 5px;
+    font-size: 24px;
+    color: #fff;
+}
+
+@media screen and (max-width:1650px) {
+    .video-container  {
+        flex-basis:300px;
+        min-height:200px;
+    }
+    
+}
+
+/* ----------- ROOM STYLINGS | CONTROLS ----------------*/
+
+#control-wrapper{
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    column-gap: 1em;
+    bottom: 40px;
+    width: 100%;
+}
+
+.control-icon {
+    height: 20px;
+    width: 20px;
+    box-shadow: var(--shaddow);
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#leave-btn {
+    background-color: rgb(255, 80, 80,1);
+}
