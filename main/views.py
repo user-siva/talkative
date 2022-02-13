@@ -9,8 +9,8 @@ import time
 import json
 
 def getToken(request):
-    appId = 'd9aaf346f50f4a628b68799f12407ea0'
-    appCertificate = 'bf0f4e21ea784dcc86c6a739364247b6'
+    appId = ''
+    appCertificate = ''
     channelName = request.GET.get('channel')
     uid = random.randint(1,230)
     expirationTime = 3600 * 24
